@@ -1,3 +1,7 @@
+# step 1: git clone 
+# step 2: switch to branch master 
+# step 3: npm i 
+# step 4: npm start
 # Ngrx
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
