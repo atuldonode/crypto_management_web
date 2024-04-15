@@ -1,0 +1,12 @@
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* overflow: hidden; */
+    /* margin-bottom: 2%; */
+    justify-content: space-between;
+}
+
+mat-card{
+    width: 18%;
+}

@@ -1,0 +1,44 @@
+<div class="main">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image">
+                <img [src]="getCoinsData?.image?.large" alt="" style="width: 100%;">
+            </div>
+            
+            <mat-card-title>{{getCoinsData?.name}}
+                <span [matBadge]="getCoinsData?.market_cap_rank" matBadgeOverlap="false" class="demo-section"></span>
+            </mat-card-title>
+            <mat-card-subtitle>Price: ${{ currentPrice | number: '1.2-2' }}</mat-card-subtitle>
+        </mat-card-header>
+        <br>
+        <br>
+        <br>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Market Cap</th>
+                <th scope="col">ATH</th>
+                <th scope="col">ATH %</th>
+                <th scope="col">ATH Date</th>
+                <th scope="col">ATL</th>
+                <th scope="col">ATL %</th>
+                <th scope="col">ATL Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="t_c">
+                <th scope="row">${{ getCoinsData?.market_data?.market_cap?.usd | number: '1.2-2' }}</th>
+                <td>${{ getCoinsData?.market_data?.ath?.usd | number: '1.2-2' }}</td>
+                <td>{{ getCoinsData?.market_data?.ath_change_percentage?.usd | number: '1.2-2' }}%</td>
+                <td>{{getCoinsData?.market_data?.ath_date?.usd | date: 'dd/MM/yyyy'}}</td>
+                <td>${{ getCoinsData?.market_data?.atl?.usd | number: '1.2-2' }}</td>
+                <td>{{ getCoinsData?.market_data?.atl_change_percentage?.usd | number: '1.2-2' }} %</td>
+                <td>{{getCoinsData?.market_data?.atl_date?.usd | date: 'dd/MM/yyyy'}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <br>
+          <p>{{getCoinsData?.description?.en ? getCoinsData?.description?.en:''}}</p>
+    </mat-card>
+</div>
